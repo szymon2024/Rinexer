@@ -24,7 +24,7 @@
 !> 6. Close all files.
 !>
 !> Compilation on Linux:  make -f Makefile.obs_rinex3_prog2
-!> Run: obs_rinex3_prog2
+!> Run: ./obs_rinex3_prog2
 !>
 !> Compilaton on Windows: mingw32-make -f Makefile.obs_rinex3_prog2_win
 !> Run: obs_rinex3_prog2.exe
