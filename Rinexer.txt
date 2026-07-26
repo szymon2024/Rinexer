@@ -125,7 +125,7 @@ FORMAT RINEX 3.x
 Plik RINEX 3.x składa się z sekcji nagłówka i sekcji danych. Sekcja
 nagłówka nazywana jest nagłówkiem, zaś sekcja danych ciałem.
 
-               ---------------------
+           ---------------------
 	       |                   |
 	       |     NAGŁÓWEK      |
 	       |                   |
