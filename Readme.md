@@ -24,6 +24,7 @@ following example programs:
 
 
 Building and Running Examples
+
 Linux
 ```bash
 make -f Makefile.obs_rinex3_prog1
@@ -63,6 +64,7 @@ Przykładowe użycie zostało zaprezentowane w programach:
 
 
 Budowanie i uruchomienie programu przykładowego:
+
 Linux
 ```bash
 make -f Makefile.obs_rinex3_prog1
