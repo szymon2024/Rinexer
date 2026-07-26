@@ -1,0 +1,29 @@
+# Compiler settings
+FC = gfortran
+FFLAGS = -O2 -Wall -static
+
+# Target executable
+PROG = obs_rinex3_prog2.exe
+MAIN_SRC = obs_rinex3_prog2.f90
+
+# Explicit list of object files for program 2
+MOD_OBJECTS = obs_rinex3_types_mod.o obs_rinex3_indexes_mod.o obs_rinex3_reader_mod.o obs_rinex3_writer_mod.o
+
+# Main target - linking the final executable
+$(PROG): $(MOD_OBJECTS) $(MAIN_SRC)
+	$(FC) $(FFLAGS) $(MOD_OBJECTS) $(MAIN_SRC) -o $(PROG)
+
+# Traditional suffix rule to tell 'make' how to compile .f90 into .o
+.SUFFIXES: .f90 .o
+.f90.o:
+	$(FC) $(FFLAGS) -c $< -o $@
+
+# Explicit module dependencies (forces correct compilation order)
+obs_rinex3_types_mod.o: obs_rinex3_types_mod.f90
+obs_rinex3_indexes_mod.o: obs_rinex3_indexes_mod.f90 obs_rinex3_types_mod.o
+obs_rinex3_reader_mod.o: obs_rinex3_reader_mod.f90 obs_rinex3_types_mod.o obs_rinex3_indexes_mod.o
+obs_rinex3_writer_mod.o: obs_rinex3_writer_mod.f90 obs_rinex3_types_mod.o obs_rinex3_indexes_mod.o
+
+# Clean rule
+clean:
+	del /q /f *.o *.mod $(PROG) 2>nul || exit 0
