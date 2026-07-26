@@ -15,7 +15,7 @@
 !> read.
 !>
 !> Compilation on Linux:  make -f Makefile.obs_rinex3_prog1
-!> Run: obs_rinex3_prog1
+!> Run: ./obs_rinex3_prog1
 !>
 !> Compilaton on Windows: mingw32-make -f Makefile.obs_rinex3_prog1_win
 !> Run: obs_rinex3_prog1.exe
