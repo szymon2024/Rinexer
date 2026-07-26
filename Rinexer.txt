@@ -77,7 +77,7 @@ General workflow:
    i_gl1c = get_obs_index('G', 'L1C', h%sys_num_obs_types)
    i_jl1c = get_obs_index('J', 'L1C', h%sys_num_obs_types)
 
-4. Read the epoch record using the read_next_epoch_record function.
+4. Read the epoch record using the read_next_epoch_record procedure.
 
 5. Use the retrieved indexes to extract data from the epoch
    record. For example, for an epoch record named "epr":
@@ -125,19 +125,19 @@ FORMAT RINEX 3.x
 Plik RINEX 3.x składa się z sekcji nagłówka i sekcji danych. Sekcja
 nagłówka nazywana jest nagłówkiem, zaś sekcja danych ciałem.
 
-           ---------------------
-	       |                   |
-	       |     NAGŁÓWEK      |
-	       |                   |
-	       ---------------------
-	       |                   |
-	       |                   |
-	       |                   |
-	       |       BODY        |
-	       |                   |
-	       |                   |
-	       |                   |
-	       ---------------------
+                 ---------------------
+	             |                   |
+	             |     NAGŁÓWEK      |
+	             |                   |
+	             ---------------------
+	             |                   |
+	             |                   |
+	             |                   |
+	             |      CIAŁO        |
+	             |                   |
+	             |                   |
+	             |                   |
+	             ---------------------
 
 Nagłówek składa się z rekordów oznaczonych etykietami np. RINEX
 VERSION / TYPE, PGM / RUN BY / DATE itd.
@@ -176,7 +176,7 @@ Ogólny schemat postępowania:
    i_gl1c = get_obs_index('G', 'L1C', h%sys_num_obs_types)
    i_jl1c = get_obs_index('J', 'L1C', h%sys_num_obs_types)
 
-4. Odczytać rekord epki przy pomocy funkcji read_next_epoch_record.
+4. Odczytać rekord epki przy pomocy procedury read_next_epoch_record.
 
 5. Przy pomocy posiadanych indeksów wybrać dane z rekordu epoki np.
    dla rekordu opoki epr
