@@ -26,10 +26,10 @@ on Linux:
 2. Navigate to the rinexer_src directory and compile the individual
    modules. For the gfortran compiler, use the following commands:
    
-   `gfortran -c obs_rinex3_types_mod.f90
-    gfortran -c obs_rinex3_indexes_mod.f90
-    gfortran -c obs_rinex3_reader_mod.f90
-    gfortran -c obs_rinex3_writer_mod.f90`
+   `gfortran -c obs_rinex3_types_mod.f90`
+   `gfortran -c obs_rinex3_indexes_mod.f90`
+   `gfortran -c obs_rinex3_reader_mod.f90`
+   `gfortran -c obs_rinex3_writer_mod.f90`
 
 3. Return to the main project directory and write a Fortran program
    that uses the aforementioned modules.
@@ -37,7 +37,9 @@ on Linux:
 4. Compile the main program, linking it with the compiled modules and
    including the module path (using the -I flag):
 
-   `gfortran -Irinexer_src rinexer_src/obs_rinex3_types_mod.o rinexer_src/obs_rinex3_indexes_mod.o rinexer_src/obs_rinex3_reader_mod.o rinexer_src/obs_rinex3_writer_mod.o my_program.f90 -o my_program`
+   ```cmd
+   gfortran -Irinexer_src rinexer_src/obs_rinex3_types_mod.o rinexer_src/obs_rinex3_indexes_mod.o rinexer_src/obs_rinex3_reader_mod.o rinexer_src/obs_rinex3_writer_mod.o my_program.f90 -o my_program
+   ```
 
 5. Run the program:
 
@@ -51,10 +53,10 @@ on Windows:
    modules. For the gfortran compiler in Command Prompt or PowerShell,
    use the following commands:
 
-   `gfortran -c obs_rinex3_types_mod.f90
-    gfortran -c obs_rinex3_indexes_mod.f90
-    gfortran -c obs_rinex3_reader_mod.f90
-    gfortran -c obs_rinex3_writer_mod.f90`
+   `gfortran -c obs_rinex3_types_mod.f90`
+   `gfortran -c obs_rinex3_indexes_mod.f90`
+   `gfortran -c obs_rinex3_reader_mod.f90`
+   `gfortran -c obs_rinex3_writer_mod.f90`
 
 3. Return to the main project directory and write a Fortran program
    that uses the aforementioned modules.
@@ -62,7 +64,9 @@ on Windows:
 4. Compile the main program, linking it with the compiled modules and
    including the module path
 
-   `gfortran -Irinexer_src rinexer_src\obs_rinex3_types_mod.o rinexer_src\obs_rinex3_indexes_mod.o rinexer_src\obs_rinex3_reader_mod.o rinexer_src\obs_rinex3_writer_mod.o my_program.f90 -o my_program.exe`
+   ```bash
+   gfortran -Irinexer_src rinexer_src\obs_rinex3_types_mod.o rinexer_src\obs_rinex3_indexes_mod.o rinexer_src\obs_rinex3_reader_mod.o rinexer_src\obs_rinex3_writer_mod.o my_program.f90 -o my_program.exe
+   ```
 
 5. Run the program:
    my_program.exe
