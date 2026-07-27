@@ -1,7 +1,7 @@
-!> A module for reading of RINEX version 3.x observation
+!> The module for reading of RINEX version 3.x observation
 !> files. It can be used to read the file header and the epoch
 !> records.
-!> The file is read line by line. When reading epoch records, only one
+!> A file is read line by line. When reading epoch records, only one
 !> epoch record is kept in memory.
 !>
 !> Note on terminology: An epoch represents a specific moment in time.
