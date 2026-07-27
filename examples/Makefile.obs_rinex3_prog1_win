@@ -1,45 +1,28 @@
 # Compiler settings
 FC = gfortran
 # -J tells gfortran where to store and look for compiled .mod files
-# It points to the build directory one level up
-#FFLAGS = -O2 -Wall -fcheck=bounds -static -J ../build
 FFLAGS = -O2 -Wall -static -J ../build
+#FFLAGS = -O2 -Wall -static -fcheck=bounds -J ../build
 
 # Target executable
 PROG = obs_rinex3_prog1.exe
-# Since Makefile is in 'examples', the main source file is in the same directory
 MAIN_SRC = obs_rinex3_prog1.f90
 
 # Directory paths relative to the 'examples' folder
 SRC_DIR = ../rinexer_src
 BUILD_DIR = ../build
 
-# List of object files to be created in the build directory
-MOD_OBJECTS = $(BUILD_DIR)/obs_rinex3_types_mod.o \
-              $(BUILD_DIR)/obs_rinex3_indexes_mod.o \
-              $(BUILD_DIR)/obs_rinex3_reader_mod.o \
-              $(BUILD_DIR)/obs_rinex3_writer_mod.o
+# The single merged module object file
+MOD_OBJECT = $(BUILD_DIR)/obs_rinex3_mod.o
 
 # Main target - linking the final executable
-$(PROG): $(MOD_OBJECTS) $(MAIN_SRC)
-	$(FC) $(FFLAGS) $(MOD_OBJECTS) $(MAIN_SRC) -o $(PROG)
+$(PROG): $(MOD_OBJECT) $(MAIN_SRC)
+	$(FC) $(FFLAGS) $(MOD_OBJECT) $(MAIN_SRC) -o $(PROG)
 
-# Explicit module dependencies with adjusted relative paths for Windows
-$(BUILD_DIR)/obs_rinex3_types_mod.o: $(SRC_DIR)/obs_rinex3_types_mod.f90
+# Rule to compile the single merged module
+$(MOD_OBJECT): $(SRC_DIR)/obs_rinex3_mod.f90
 	@if not exist $(BUILD_DIR) mkdir $(BUILD_DIR)
-	$(FC) $(FFLAGS) -c $(SRC_DIR)/obs_rinex3_types_mod.f90 -o $(BUILD_DIR)/obs_rinex3_types_mod.o
-
-$(BUILD_DIR)/obs_rinex3_indexes_mod.o: $(SRC_DIR)/obs_rinex3_indexes_mod.f90 $(BUILD_DIR)/obs_rinex3_types_mod.o
-	@if not exist $(BUILD_DIR) mkdir $(BUILD_DIR)
-	$(FC) $(FFLAGS) -c $(SRC_DIR)/obs_rinex3_indexes_mod.f90 -o $(BUILD_DIR)/obs_rinex3_indexes_mod.o
-
-$(BUILD_DIR)/obs_rinex3_reader_mod.o: $(SRC_DIR)/obs_rinex3_reader_mod.f90 $(BUILD_DIR)/obs_rinex3_types_mod.o $(BUILD_DIR)/obs_rinex3_indexes_mod.o
-	@if not exist $(BUILD_DIR) mkdir $(BUILD_DIR)
-	$(FC) $(FFLAGS) -c $(SRC_DIR)/obs_rinex3_reader_mod.f90 -o $(BUILD_DIR)/obs_rinex3_reader_mod.o
-
-$(BUILD_DIR)/obs_rinex3_writer_mod.o: $(SRC_DIR)/obs_rinex3_writer_mod.f90 $(BUILD_DIR)/obs_rinex3_types_mod.o $(BUILD_DIR)/obs_rinex3_indexes_mod.o
-	@if not exist $(BUILD_DIR) mkdir $(BUILD_DIR)
-	$(FC) $(FFLAGS) -c $(SRC_DIR)/obs_rinex3_writer_mod.f90 -o $(BUILD_DIR)/obs_rinex3_writer_mod.o
+	$(FC) $(FFLAGS) -c $(SRC_DIR)/obs_rinex3_mod.f90 -o $(MOD_OBJECT)
 
 # Clean rule - removes the build folder and the executable from 'examples' in Windows
 clean:

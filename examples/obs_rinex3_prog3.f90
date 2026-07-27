@@ -24,24 +24,23 @@
 !> 6. Close all files.
 !>
 !> Compilation on Linux:  make -f Makefile.obs_rinex3_prog2
-!> Run: obs_rinex3_prog2
+!> Run: ./obs_rinex3_prog2
 !>
 !> Compilaton on Windows: mingw32-make -f Makefile.obs_rinex3_prog2_win
 !> Run: obs_rinex3_prog2.exe
 !>
-!> @version 1.0.1
+!> @version 1.0.2
 !>--------------------------------------------------------------------
 program obs_rinex3_prog3
   use, intrinsic :: iso_fortran_env, only: output_unit, iostat_end
 
-  use obs_rinex3_types_mod
-  use obs_rinex3_reader_mod, only: &
+  use obs_rinex3_mod, only: ip, wp, header_t, epoch_record_t, &
+       get_sys_index, &
+       get_obs_index, &
        read_header, &
        allocate_epoch_record, &
        read_next_epoch_record
 
-  use obs_rinex3_indexes_mod, only: get_sys_index, get_obs_index
-  
   implicit none
 
   integer(ip)          :: unit_in, unit_out, ios

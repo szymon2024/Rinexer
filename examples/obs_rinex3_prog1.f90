@@ -15,19 +15,17 @@
 !> read.
 !>
 !> Compilation on Linux:  make -f Makefile.obs_rinex3_prog1
-!> Run: obs_rinex3_prog1
+!> Run: ./obs_rinex3_prog1
 !>
 !> Compilaton on Windows: mingw32-make -f Makefile.obs_rinex3_prog1_win
 !> Run: obs_rinex3_prog1.exe
 !>
-!> @version 1.0.1
+!> @version 1.0.2
 !>--------------------------------------------------------------------
 program obs_rinex3_prog1
   use, intrinsic :: iso_fortran_env, only: output_unit
 
-  use obs_rinex3_types_mod
-  use obs_rinex3_reader_mod, only: read_header
-  use obs_rinex3_writer_mod, only: write_header
+  use obs_rinex3_mod
   
   implicit none
 

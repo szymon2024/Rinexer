@@ -23,12 +23,12 @@
 !> executed in sequential order.
 !>
 !> Compilation on Linux:  make -f Makefile.obs_rinex3_prog2
-!> Run: obs_rinex3_prog2
+!> Run: ./obs_rinex3_prog2
 !>
 !> Compilaton on Windows: mingw32-make -f Makefile.obs_rinex3_prog2_win
 !> Run: obs_rinex3_prog2.exe
 !>
-!> @version 1.0.1
+!> @version 1.0.2
 !>
 !> Sample output:
 !> C   24 C1P C2I C5P C6I C7D C7I D1P D2I D5P D6I D7D D7I L1P  SYS / # / OBS TYPES
@@ -61,16 +61,15 @@
 program obs_rinex3_prog2
   use, intrinsic :: iso_fortran_env, only: output_unit
 
-  use obs_rinex3_types_mod
-  use obs_rinex3_reader_mod, only: &
+  use obs_rinex3_mod, only: ip, wp, header_t, epoch_record_t, &
+       get_sys_index, &
+       get_obs_index, &
        read_header, &
        allocate_epoch_record, &
-       read_next_epoch_record
-  use obs_rinex3_writer_mod, only: &
+       read_next_epoch_record, &
        write_sys_num_obs_types, &
        write_epoch_record
 
-  use obs_rinex3_indexes_mod, only: get_sys_index, get_obs_index
   
   implicit none
 
