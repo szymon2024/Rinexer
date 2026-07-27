@@ -19,6 +19,7 @@ Example usage is demonstrated in the following programs:
 - `obs_rinex3_prog1.f90`
 - `obs_rinex3_prog2.f90`
 - `obs_rinex3_prog3.f90`
+
 located in the `examples` directory.
 
 
@@ -60,6 +61,7 @@ Przykładowe użycie zostało zaprezentowane w programach:
 - `obs_rinex3_prog1.f90`
 - `obs_rinex3_prog2.f90`
 - `obs_rinex3_prog3.f90`
+
 znajdujących się w katalogu `examples`.
 
 
