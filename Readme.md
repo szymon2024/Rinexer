@@ -45,7 +45,9 @@ on Linux:
 
 5. Run the program:
 
-   `./moj_program`
+   ```bash
+   ./moj_program
+   ```
 
 on Windows:
 
@@ -73,7 +75,10 @@ on Windows:
    ```
 
 5. Run the program:
+
+   ```cmd
    my_program.exe
+   ```
 
 More information can be found in the `Rinexer.txt` file.
 
@@ -122,7 +127,11 @@ W systemie Linux
    gfortran -Irinexer_src rinexer_src/obs_rinex3_types_mod.o rinexer_src/obs_rinex3_indexes_mod.o rinexer_src/obs_rinex3_reader_mod.o rinexer_src/obs_rinex3_writer_mod.o moj_program.f90 -o moj_program
    ```
    
-5. Uruchom program `./moj_program`
+5. Uruchom program
+
+   ```bash
+   ./moj_program
+   ```
 
 W systemie Windows
 
@@ -149,7 +158,11 @@ W systemie Windows
    gfortran -Irinexer_src rinexer_src\obs_rinex3_types_mod.o rinexer_src\obs_rinex3_indexes_mod.o rinexer_src\obs_rinex3_reader_mod.o rinexer_src\obs_rinex3_writer_mod.o moj_program.f90 -o moj_program.exe
    ```
 
-5. Uruchom program `moj_program.exe`
+5. Uruchom program
+
+   ```cmd
+   moj_program.exe
+   ```
 
 
 Więcej informacji w pliku `Rinexer.txt`.
