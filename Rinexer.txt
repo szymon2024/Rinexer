@@ -24,7 +24,7 @@ Example usage is demonstrated in the following programs:
 located in the examples directory.
 
 
-Building and running the example program in the `examples` directory:
+Building and running the example program in the examples directory:
 
 Linux
 make -f Makefile.obs_rinex3_prog1
@@ -156,7 +156,7 @@ Przykładowe użycie zostało zaprezentowane w programach:
 - obs_rinex3_prog3.f90
 znajdujących się w katalogu examples.
 
-Budowanie i uruchomienie programu przykładowego w katalogu `examples`:
+Budowanie i uruchomienie programu przykładowego w katalogu examples:
 
 Linux
 
