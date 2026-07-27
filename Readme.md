@@ -146,7 +146,7 @@ W systemie Windows
    gfortran -c obs_rinex3_indexes_mod.f90
    gfortran -c obs_rinex3_reader_mod.f90
    gfortran -c obs_rinex3_writer_mod.f90
-   ```cmd
+   ```
 
 3. Wróć do głównego katalogu projektu i napisz program w Fortranie
    korzystający z wyżej wymienionych modułów.
