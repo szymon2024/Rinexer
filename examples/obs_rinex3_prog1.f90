@@ -20,7 +20,7 @@
 !> Compilaton on Windows: mingw32-make -f Makefile.obs_rinex3_prog1_win
 !> Run: obs_rinex3_prog1.exe
 !>
-!> @version 1.0.0
+!> @version 1.0.1
 !>--------------------------------------------------------------------
 program obs_rinex3_prog1
   use, intrinsic :: iso_fortran_env, only: output_unit
