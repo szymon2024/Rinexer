@@ -46,7 +46,7 @@ on Linux:
 5. Run the program:
 
    ```bash
-   ./moj_program
+   ./my_program
    ```
 
 on Windows:
