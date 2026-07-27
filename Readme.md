@@ -26,13 +26,12 @@ on Linux:
 2. Navigate to the rinexer_src directory and compile the individual
    modules. For the gfortran compiler, use the following commands:
    
-   `gfortran -c obs_rinex3_types_mod.f90`
-   
-   `gfortran -c obs_rinex3_indexes_mod.f90`
-   
-   `gfortran -c obs_rinex3_reader_mod.f90`
-   
-   `gfortran -c obs_rinex3_writer_mod.f90`
+   ```bash
+   gfortran -c obs_rinex3_types_mod.f90
+   gfortran -c obs_rinex3_indexes_mod.f90
+   gfortran -c obs_rinex3_reader_mod.f90
+   gfortran -c obs_rinex3_writer_mod.f90
+   ```
 
 3. Return to the main project directory and write a Fortran program
    that uses the aforementioned modules.
@@ -56,13 +55,12 @@ on Windows:
    modules. For the gfortran compiler in Command Prompt or PowerShell,
    use the following commands:
 
-   `gfortran -c obs_rinex3_types_mod.f90`
-   
-   `gfortran -c obs_rinex3_indexes_mod.f90`
-   
-   `gfortran -c obs_rinex3_reader_mod.f90`
-   
-   `gfortran -c obs_rinex3_writer_mod.f90`
+   ```cmd
+   gfortran -c obs_rinex3_types_mod.f90
+   gfortran -c obs_rinex3_indexes_mod.f90
+   gfortran -c obs_rinex3_reader_mod.f90
+   gfortran -c obs_rinex3_writer_mod.f90
+   ```
 
 3. Return to the main project directory and write a Fortran program
    that uses the aforementioned modules.
@@ -107,14 +105,13 @@ W systemie Linux
 
 2. Przejdź do katalogu `rinexer_src` i skompiluj poszczególne moduły
    Dla kompilatora gfortran będą to polecenia:
-   
-   `gfortran -c obs_rinex3_types_mod.f90`
-   
-   `gfortran -c obs_rinex3_indexes_mod.f90`
-   
-   `gfortran -c obs_rinex3_reader_mod.f90`
-   
-   `gfortran -c obs_rinex3_writer_mod.f90`
+
+   ```bash
+   gfortran -c obs_rinex3_types_mod.f90
+   gfortran -c obs_rinex3_indexes_mod.f90
+   gfortran -c obs_rinex3_reader_mod.f90
+   gfortran -c obs_rinex3_writer_mod.f90
+   ```
    
 3. Wróć do głównego katalogu projektu i napisz program w Fortranie
    korzystający z wyżej wymienionych modułów.
@@ -135,13 +132,12 @@ W systemie Windows
    moduły. Dla kompilatora gfortran w wierszu poleceń (Command Prompt /
    PowerShell) będą to polecenia:
 
-   `gfortran -c obs_rinex3_types_mod.f90`
-   
-   `gfortran -c obs_rinex3_indexes_mod.f90`
-    
-   `gfortran -c obs_rinex3_reader_mod.f90`
-    
-   `gfortran -c obs_rinex3_writer_mod.f90`
+   ```cmd
+   gfortran -c obs_rinex3_types_mod.f90
+   gfortran -c obs_rinex3_indexes_mod.f90
+   gfortran -c obs_rinex3_reader_mod.f90
+   gfortran -c obs_rinex3_writer_mod.f90
+   ```cmd
 
 3. Wróć do głównego katalogu projektu i napisz program w Fortranie
    korzystający z wyżej wymienionych modułów.
@@ -149,7 +145,7 @@ W systemie Windows
 4. Skompiluj program główny, wskazując lokalizację plików modułów oraz
    łącząc go z plikami obiektowymi
 
-   `bash
+   ```cmd
    gfortran -Irinexer_src rinexer_src\obs_rinex3_types_mod.o rinexer_src\obs_rinex3_indexes_mod.o rinexer_src\obs_rinex3_reader_mod.o rinexer_src\obs_rinex3_writer_mod.o moj_program.f90 -o moj_program.exe
    ```
 
