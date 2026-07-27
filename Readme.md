@@ -75,7 +75,7 @@ More information can be found in the `Rinexer.txt` file.
 
 PL:
 
-# Rinexer v1.0.1
+# Rinexer v1.0.2
 
 Rinexer v1.0.1 to moduł Fortran zaprojektowany do odczytu plików
 obserwacyjnych RINEX 3.x.
