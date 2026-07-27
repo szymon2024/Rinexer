@@ -15,27 +15,57 @@ The RINEX file is read into the data structures defined in the
 Epoch records are read record by record, meaning they are not accumulated 
 in memory.
 
-Example usage is demonstrated in the following programs:
-- `obs_rinex3_prog1.f90`
-- `obs_rinex3_prog2.f90`
-- `obs_rinex3_prog3.f90`
+Using Rinexer requires writing a program in Fortran, compiling the
+individual modules into *.o files, and compiling the main program into
+an executable file e.g.,
 
-located in the `examples` directory.
+on Linux:
 
+1. Copy the rinexer_src directory into your project directory.
 
-Building and running the example program in the `examples` directory:
+2. Navigate to the rinexer_src directory and compile the individual
+   modules. For the gfortran compiler, use the following commands:
+   
+   `gfortran -c obs_rinex3_types_mod.f90
+    gfortran -c obs_rinex3_indexes_mod.f90
+    gfortran -c obs_rinex3_reader_mod.f90
+    gfortran -c obs_rinex3_writer_mod.f90`
 
-Linux
-```bash
-make -f Makefile.obs_rinex3_prog1
-./obs_rinex3_prog1
-```
+3. Return to the main project directory and write a Fortran program
+   that uses the aforementioned modules.
 
-Windows (MinGW)
-```cmd
-mingw32-make -f Makefile.obs_rinex3_prog1_win
-obs_rinex3_prog1.exe
-```
+4. Compile the main program, linking it with the compiled modules and
+   including the module path (using the -I flag):
+
+   `gfortran -Irinexer_src rinexer_src/obs_rinex3_types_mod.o rinexer_src/obs_rinex3_indexes_mod.o rinexer_src/obs_rinex3_reader_mod.o rinexer_src/obs_rinex3_writer_mod.o my_program.f90 -o my_program`
+
+5. Run the program:
+
+   `./moj_program`
+
+on Windows:
+
+1. Copy the rinexer_src directory into your project directory.
+
+2. Navigate to the rinexer_src directory and compile the individual
+   modules. For the gfortran compiler in Command Prompt or PowerShell,
+   use the following commands:
+
+   `gfortran -c obs_rinex3_types_mod.f90
+    gfortran -c obs_rinex3_indexes_mod.f90
+    gfortran -c obs_rinex3_reader_mod.f90
+    gfortran -c obs_rinex3_writer_mod.f90`
+
+3. Return to the main project directory and write a Fortran program
+   that uses the aforementioned modules.
+
+4. Compile the main program, linking it with the compiled modules and
+   including the module path
+
+   `gfortran -Irinexer_src rinexer_src\obs_rinex3_types_mod.o rinexer_src\obs_rinex3_indexes_mod.o rinexer_src\obs_rinex3_reader_mod.o rinexer_src\obs_rinex3_writer_mod.o my_program.f90 -o my_program.exe`
+
+5. Run the program:
+   my_program.exe
 
 More information can be found in the `Rinexer.txt` file.
 
@@ -57,27 +87,51 @@ Plik RINEX jest odczytywany do danych określonych w pliku
 Rekordy epok są odczytywane rekord po rekordzie tzn. nie są gromadzone
 w pamięci.
 
-Przykładowe użycie zostało zaprezentowane w programach:
-- `obs_rinex3_prog1.f90`
-- `obs_rinex3_prog2.f90`
-- `obs_rinex3_prog3.f90`
+Użycie Rinexera wymaga napisania programu w języku Fortran,
+skompilowania poszczególnych modułów do plików *.o i skompilowaniu
+samego programu do pliku wykonywalnego np.
 
-znajdujących się w katalogu `examples`.
+W systemie Linux
 
+1. Skopiuj katalog `rinexer_src` do katalogu swojego projektu.
 
-Budowanie i uruchomienie programu przykładowego w katalogu `examples`:
+2. Przejdź do katalogu `rinexer_src` i skompiluj poszczególne moduły
+   Dla kompilatora gfortran będą to polecenia:
+   `gfortran -c obs_rinex3_types_mod.f90
+   gfortran -c obs_rinex3_indexes_mod.f90
+   gfortran -c obs_rinex3_reader_mod.f90
+   gfortran -c obs_rinex3_writer_mod.f90`
+   
+3. Wróć do głównego katalogu projektu i napisz program w Fortranie
+   korzystający z wyżej wymienionych modułów.
+   
+4. Skompiluj program główny, łącząc go ze skompilowanymi modułami:
+   `gfortran -Irinexer_src rinexer_src/obs_rinex3_types_mod.o rinexer_src/obs_rinex3_indexes_mod.o rinexer_src/obs_rinex3_reader_mod.o rinexer_src/obs_rinex3_writer_mod.o moj_program.f90 -o moj_program`
+5. Uruchom program `./moj_program`
 
-Linux
-```bash
-make -f Makefile.obs_rinex3_prog1
-./obs_rinex3_prog1
-```
+W systemie Windows
 
-Windows (MinGW)
-```cmd
-mingw32-make -f Makefile.obs_rinex3_prog1_win
-obs_rinex3_prog1.exe
-```
+1. Skopiuj katalog `rinexer_src` do katalogu swojego projektu.
+
+2. Przejdź do katalogu `rinexer_src` i skompiluj poszczególne
+   moduły. Dla kompilatora gfortran w wierszu poleceń (Command Prompt /
+   PowerShell) będą to polecenia:
+
+   `gfortran -c obs_rinex3_types_mod.f90
+    gfortran -c obs_rinex3_indexes_mod.f90
+    gfortran -c obs_rinex3_reader_mod.f90
+    gfortran -c obs_rinex3_writer_mod.f90`
+
+3. Wróć do głównego katalogu projektu i napisz program w Fortranie
+   korzystający z wyżej wymienionych modułów.
+
+4. Skompiluj program główny, wskazując lokalizację plików modułów oraz
+   łącząc go z plikami obiektowymi
+
+   `gfortran -Irinexer_src rinexer_src\obs_rinex3_types_mod.o rinexer_src\obs_rinex3_indexes_mod.o rinexer_src\obs_rinex3_reader_mod.o rinexer_src\obs_rinex3_writer_mod.o moj_program.f90 -o moj_program.exe`
+
+5. Uruchom program `moj_program.exe`
+
 
 Więcej informacji w pliku `Rinexer.txt`.
 

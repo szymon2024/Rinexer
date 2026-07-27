@@ -14,9 +14,25 @@ Modules:
 The RINEX file is read (parsed) into data structures defined in the
 obs_rinex3_types_mod.f90 module.
 
-Using the aforementioned modules requires writing a Fortran program,
-compiling the individual modules into *.o object files, and compiling
-the main program into an executable file.
+
+SAMPLE PROGRAMS
+
+Example usage is demonstrated in the following programs:
+- obs_rinex3_prog1.f90
+- obs_rinex3_prog2.f90
+- obs_rinex3_prog3.f90
+located in the examples directory.
+
+
+Building and running the example program in the `examples` directory:
+
+Linux
+make -f Makefile.obs_rinex3_prog1
+./obs_rinex3_prog1
+
+Windows (MinGW)
+mingw32-make -f Makefile.obs_rinex3_prog1_win
+obs_rinex3_prog1.exe
 
 
 THE RINEX 3.x FORMAT
@@ -131,9 +147,28 @@ Moduły:
 Plik RINEX jest odczytywany do danych określonych w module
 obs_rinex3_types_mod.f90.
 
-Użycie wyżej wymienionych modułów wymaga napisania programu w języku
-Fortran, skompilowaniu poszczególnych modułów do plików *.o i
-skompilowaniu samego programu do pliku wykonywalnego.
+
+PRZYKŁADOWE PROGRAMY
+
+Przykładowe użycie zostało zaprezentowane w programach:
+- obs_rinex3_prog1.f90
+- obs_rinex3_prog2.f90
+- obs_rinex3_prog3.f90
+znajdujących się w katalogu examples.
+
+Budowanie i uruchomienie programu przykładowego w katalogu `examples`:
+
+Linux
+
+make -f Makefile.obs_rinex3_prog1
+./obs_rinex3_prog1
+
+
+Windows (MinGW)
+
+mingw32-make -f Makefile.obs_rinex3_prog1_win
+obs_rinex3_prog1.exe
+
 
 
 FORMAT RINEX 3.x
