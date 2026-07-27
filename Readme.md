@@ -77,7 +77,7 @@ PL:
 
 # Rinexer v1.0.2
 
-Rinexer v1.0.1 to moduł Fortran zaprojektowany do odczytu plików
+Rinexer v1.0.2 to moduł Fortran zaprojektowany do odczytu plików
 obserwacyjnych RINEX 3.x.
 
 > ⚠️ **Uwaga:** Obecna wersja nie wspiera obsługi zdarzeń specjalnych i
