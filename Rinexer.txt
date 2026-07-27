@@ -25,7 +25,7 @@ A RINEX 3.x file consists of a header section and a data section. The
 header section is referred to as the header, while the data section is
 called the body.
 
-			---------------------
+			            ---------------------
                         |                   |
                         |      HEADER       |
                         |                   |
