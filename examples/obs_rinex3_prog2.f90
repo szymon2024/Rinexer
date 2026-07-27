@@ -28,6 +28,8 @@
 !> Compilaton on Windows: mingw32-make -f Makefile.obs_rinex3_prog2_win
 !> Run: obs_rinex3_prog2.exe
 !>
+!> @version 1.0.1
+!>
 !> Sample output:
 !> C   24 C1P C2I C5P C6I C7D C7I D1P D2I D5P D6I D7D D7I L1P  SYS / # / OBS TYPES
 !>        L2I L5P L6I L7D L7I S1P S2I S5P S6I S7D S7I          SYS / # / OBS TYPES
