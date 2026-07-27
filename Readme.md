@@ -19,7 +19,7 @@ compiling the main program with `obs_rinex3_mod.o` into an executable.
 
 1. Copy the rinexer_src directory into your project directory.
 
-2. Navigate to the rinexer_src directory and compile the module.
+2. Navigate to the rinexer_src directory and compile the module:
    
    ```bash
    gfortran -c obs_rinex3_mod.f90
