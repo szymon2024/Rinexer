@@ -1,4 +1,4 @@
-EN:
+EN
 v1.0.3
 
 obs_rinex3 is a source code Fortran module designed for reading and
@@ -12,7 +12,7 @@ More information in the `src` folder.
 
 
 
-PL:
+PL
 v1.0.3
 
 obs_rinex3 to moduł języka Fortran zaprojektowany do odczytu plików
