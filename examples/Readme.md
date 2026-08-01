@@ -1,5 +1,6 @@
-EN
 v1.0.3
+
+EN
 
 This folder contains sample programs for the `obs_rinex3.f90` module
 that read the RINEX observation file.
@@ -51,7 +52,6 @@ Compilation and run proposal of single sample program:
 
 
 PL
-v1.0.3
 
 Ten folder zawiera przykładowe programy dla modułu obs_rinex3.f90,
 które odczytują plik obserwacyjny RINEX.
