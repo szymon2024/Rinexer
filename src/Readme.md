@@ -1,5 +1,6 @@
-## EN  
 v.1.0.3
+
+EN  
 
 obs_rinex3.f90 contains a Fortran module for reading and writing RINEX
                3.x observation files which can be used in a Fortran
@@ -39,8 +40,7 @@ Application examples are in the `examples` folder.
    ```
 
 
-## PL  
-v.1.0.3
+PL  
 
 obs_rinex3.f90 zawiera moduł języka Fortran do odczytu i zapisu plików
                obserwacyjnych RINEX 3.x, który można używać
