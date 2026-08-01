@@ -10,6 +10,7 @@ events and comments within the observation data.
 
 Application examples are in the `examples` folder.
 
+
 HOW TO USE THE obs_rinex3 MODULE
 
 1. Open the `obs_rinex3.f90` file and see what data types and
@@ -47,6 +48,7 @@ obs_rinex3.f90 to moduł języka Fortran do odczytu i zapisu plików
 
 > ⚠️ **Uwaga:** Obecna wersja nie obsługuje obsługi zdarzeń specjalnych
   i komentarzy w danych obserwacyjnych.
+
 
 JAK UŻYWAĆ MODUŁU obs_rinex3
 
