@@ -1,5 +1,6 @@
-EN:
 v1.0.3
+
+EN
 
 obs_rinex3 is a Fortran module for reading and writing RINEX 3.x
 observation files. It is based on the RINEX version 3.04
@@ -101,7 +102,7 @@ General workflow of reading RINEX file:
    end associate
 
 
-PL:
+PL
 
 obs_rinex3 to moduł napisany w języku Fortran do odczytu i zapisu
 plików obserwacyjnych RINEX 3.x. Opiera się na specyfikacji pliku
