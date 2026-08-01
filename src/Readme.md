@@ -1,5 +1,3 @@
-
-#
 EN
 v.1.0.3
 
@@ -13,7 +11,7 @@ events and comments within the observation data.
 Application examples are in the `examples` folder.
 
 
-HOW TO USE THE obs_rinex3 MODULE
+### HOW TO USE THE obs_rinex3 MODULE
 
 1. Open the `obs_rinex3.f90` file and see what data types and
    procedures the module offers. They are declared as public.
@@ -40,7 +38,9 @@ HOW TO USE THE obs_rinex3 MODULE
    gfortran obs_rinex3.f90 my_program.f90 -o rinex_app.exe
    ```
 
-#
+
+---
+
 PL
 v.1.0.3
 
@@ -53,7 +53,7 @@ obs_rinex3.f90 to moduł języka Fortran do odczytu i zapisu plików
   i komentarzy w danych obserwacyjnych.
 
 
-JAK UŻYWAĆ MODUŁU obs_rinex3
+### JAK UŻYWAĆ MODUŁU obs_rinex3
 
 1. Otwórz plik `obs_rinex3.f90` i sprawdź, jakie typy danych
    i procedury oferuje moduł. Są one zadeklarowane jako publiczne.
