@@ -7,7 +7,7 @@ observation files. It is based on the RINEX version 3.04
 specification, which is publicly available in the rinex304.pdf file,
 focusing specifically on Table A2 and Table A3.
 
-Module file obs_rinex3_mod.f90 is in src folder.
+Module file obs_rinex3.f90 is in src folder.
 
 Example usages are demonstrated in the following programs:
 - obs_rinex3_prog1.f90
