@@ -109,7 +109,7 @@ plików obserwacyjnych RINEX 3.x. Opiera się na specyfikacji pliku
 RINEX wersji 3.04 publicznie dostępnej w pliku rinex304.pdf
 a w szczególności na tabeli A2 i tabeli A3.
 
-Plik modułu obs_rinex3_mod.f90 znajduje się w katalogu src.
+Plik modułu obs_rinex3.f90 znajduje się w katalogu src.
 
 Przykłady użycia zostały zaprezentowane w programach:
 - obs_rinex3_prog1.f90
